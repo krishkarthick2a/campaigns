@@ -2,6 +2,9 @@
 
 pragma solidity >0.7.0 <=0.9.0;
 
+//amoy contract address
+//0xEcffd52e0a3A63AE56BFA09c2A89097Ee829d246
+
 contract CampaignFactory {
     address[] public deployedCampaigns;
 

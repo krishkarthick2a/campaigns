@@ -73,14 +73,16 @@ export default function Index({ AllData, HealthData, EducationData, AnimalData }
 export async function getStaticProps() {
   const provider = new ethers.providers.JsonRpcProvider(
     // process.env.NEXT_PUBLIC_RPC_URL
-    "https://polygon-mumbai.g.alchemy.com/v2/nc30rgX-LWEyP2TWKcnxXkXpK59j1eaX"
+    // "https://polygon-mumbai.g.alchemy.com/v2/nc30rgX-LWEyP2TWKcnxXkXpK59j1eaX"
+    "https://polygon-amoy.g.alchemy.com/v2/5tbOoJHN7gE_YehMETdquf80FE7TlYn_"
   );
 
   console.log("index : " + provider.getSigner());
 
   const contract = new ethers.Contract(
     // process.env.NEXT_PUBLIC_ADDRESS,
-    "0x721d9E3f4efEa5362E5E9F2D17560b214908eCb2",
+    // "0x721d9E3f4efEa5362E5E9F2D17560b214908eCb2",
+    "0xEcffd52e0a3A63AE56BFA09c2A89097Ee829d246",
     CampaignFactory.abi,
     provider
   );

@@ -10,12 +10,14 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 // require('dotenv').config({ path: './.env' });
 
+const rpc_url = "https://polygon-amoy.g.alchemy.com/v2/5tbOoJHN7gE_YehMETdquf80FE7TlYn_";
 
 export default function Dashboard() {
   const [campaignsData, setCampaignsData] = useState([]);
 
   useEffect(() => {
-    console.log("dashboard : " + process.env.NEXT_PUBLIC_ADDRESS);
+    // console.log("dashboard : " + process.env.NEXT_PUBLIC_ADDRESS);
+    console.log("dashboard : " + rpc_url);
     const Request = async () => {
       await window.ethereum.request({ method: 'eth_requestAccounts' });
       const Web3provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -23,7 +25,8 @@ export default function Dashboard() {
       const Address = await signer.getAddress();
 
       const provider = new ethers.providers.JsonRpcProvider(
-        process.env.NEXT_PUBLIC_RPC_URL
+        // process.env.NEXT_PUBLIC_RPC_URL
+        rpc_url
       );
 
       const network = await provider.network;
@@ -32,7 +35,8 @@ export default function Dashboard() {
 
       const contract = new ethers.Contract(
         // process.env.NEXT_PUBLIC_ADDRESS,
-        "0x721d9E3f4efEa5362E5E9F2D17560b214908eCb2",
+        // "0x721d9E3f4efEa5362E5E9F2D17560b214908eCb2",
+        "0xEcffd52e0a3A63AE56BFA09c2A89097Ee829d246",
         CampaignFactory.abi,
         provider
       );

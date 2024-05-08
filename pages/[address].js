@@ -5,8 +5,8 @@ import CampaignFactory from '../artifacts/contracts/Campaign.sol/CampaignFactory
 import Campaign from '../artifacts/contracts/Campaign.sol/Campaign.json'
 import { useEffect, useState } from "react";
 
-const NEXT_PUBLIC_RPC_URL = "https://polygon-mumbai.g.alchemy.com/v2/nc30rgX-LWEyP2TWKcnxXkXpK59j1eaX";
-const NEXT_PUBLIC_ADDRESS = "0x721d9E3f4efEa5362E5E9F2D17560b214908eCb2";
+const NEXT_PUBLIC_RPC_URL = "https://polygon-amoy.g.alchemy.com/v2/5tbOoJHN7gE_YehMETdquf80FE7TlYn_";
+const NEXT_PUBLIC_ADDRESS = "0xEcffd52e0a3A63AE56BFA09c2A89097Ee829d246";
 
 export default function Detail({ Data, DonationsData }) {
   const [mydonations, setMydonations] = useState([]);

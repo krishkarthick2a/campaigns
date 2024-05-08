@@ -5,14 +5,14 @@ import { useState } from "react";
 
 const networks = {
   polygon: {
-    chainId: `0x${Number(80001).toString(16)}`,
-    chainName: "Polygon Testnet",
+    chainId: `0x${Number(80002).toString(16)}`,
+    chainName: "Polygon amoy Testnet",
     nativeCurrency: {
       name: "MATIC",
       symbol: "MATIC",
       decimals: 18,
     },
-    rpcUrls: ["https://rpc-mumbai.maticvigil.com/"],
+    rpcUrls: ["https://rpc-amoy.polygon.technology"],
     // rpcUrls: ["https://polygon-mumbai.g.alchemy.com/v2"],
     blockExplorerUrls: ["https://mumbai.polygonscan.com/"],
   },
